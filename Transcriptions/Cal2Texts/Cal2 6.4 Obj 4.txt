@@ -1,0 +1,112 @@
+﻿Now this diagram shows the different possible methods that you can use based on what the curves you are given.
+In the first one here you are given two functions, y equals f(x) and y equals g(x), and you are going to be using the washer method.
+Okay, if you are revolving around the x axis using the washer method, the washer method requires that you slice it, you know, take the representative rectangle and perpendicular to the axis you are rotating it around.
+So you are going to be looking at vertical rectangle. So we have got this vertical rectangle up here that is going to be revolved then around the x axis.
+Now when you revolve it you can see that you are going to get this disk or this washer here that you need to then find the area for, and then times the thickness will give you the volume.
+Now to do that you just got two circles. You have got to take the big circle which will include the whole thing filled in, the disk, and then you need to subtract the area of that smaller circle.
+So the larger circles radius will be the f. So you are just going to have pi times the f(x) squared. So pi r squared and then you are going to subtract the area of the smaller circle and the smaller circle has radius g(x). So we are going to have pi times the g(x) squared.
+Okay the next picture shows two functions f and g and this time we are going to be revolving them around the y axis.
+Okay and if you want to use the shell method, if you are revolving the y axis, you have got to get your representative rectangle to be parallel. So the shell method gets you the representative rectangle or slice it parallel to the axis.
+So we are taking this piece here and we are rotating it around the y axis and we are going to end up with this cylinder and then we are going to have to calculate the volume for.
+So the volume of a cylinder is always 2 times pi times the radius. Okay that would give you the length if you cut that you know opened it up would be the length of that big rectangle prism.
+Times the height and then times the delta x which will be the thickness of it, okay which is going to be the dx in the interval.
+Okay so 2 pi r times the height. Okay now the radius of this cylinder, remember the cylinder's radius is going to be from the center where the axis of rotation is. So right here out to the edge of the cylinder. That is your radius.
+The radius here, we chose just an arbitrary x value here there was nothing special about that one. It was just one of the xs somewhere between a and b here on that interval and you were going to get that one particular cylinder.
+The radius then will be just that arbitrary x value because it is horizontal and horizontal lines are referring to x distances.
+So it is going to be 2 pi r which is 2 pi times x. That is your radius, and then the height of that cylinder. If you look at the picture here the height of the cylinder is this distance.
+Well this distance is determined by the two curves that are determining that shaded region.
+And so that height is just going to be the f(x) – g(x). So we will have times f(x) - g(x).
+And the easy part here is once you determine this you know it is just dx if you got all variables x and you know your limits of integration have to be the x values that are associated with that region.
+Okay and up here we had the same thing. We had x values on that region.
+Okay so now we are going to look at integrating with where you integrating with respect to y but it is really based more on which method you are using as to whether you end up with ys or not.
+So now the third one here we have got a region and notice the region the size of that region now are determining, they are not functions, if you drop a vertical line it would hit it more than one place you are actually determining the equation x equals f(x) and x equals g(x) or unless I use p and q here.
+So this is the x equals p(x) or p(y) and this one will be x equals q(y).
+Okay so now if I am going to do this one by the washer method I am taking this region and they told me I am rotating this around the y axis so when I rotate this piece around the y axis I am going to end up getting this cylinder, I mean this washer.
+That washer then to get the volume of a washer it is going to be the outer circles radius, okay we want the area of that outer circle which will just be pi times the radius squared.
+Now the radius of that bigger circle is from the axis that you are rotating all the way out to that second curve, that p(q).
+So we are going to have pi r squared.
+Pi times p(y) squared .
+And the minus, now the inner radius the little holes radius that we are going to subtract off of that one would be from here to here, so it is from that y axis over to the curve q(y).
+So we are going to have minus pi times q(y) squared. All we are doing is pi r squared minus pi r squared. We are taking the area of the big circle minus the area of the smaller circle.
+These are really difficult if you are going to try to just follow formulas. You need to follow geometrically what you are doing.
+And you are going to have ys here.
+So we are going to use dy. It reminds me that I need to have y values for my limits since I have all y variables there.
+Well look at the shaded region. What are the y values for all of those little representative rectangles that we could have chosen?
+The lowest one is going to be right here. It is c right here and the highest one is going to be up there at d where that region ends.
+So get the y values where that, you know, are bounds of that region.
+Okay now the last one here we have got these sin functions again. Here is our x equals p(y) and our x equals q(y) and now we are going to rotate this one around the x axis and we could choose either method we want to rotate that region around the x axis but if we were going to do this one using the shell method we are going to have to take a representative rectangle and make it parallel to the axis you are rotating it around which is that x axis.
+Okay so now rotating that one little piece around the x axis is going to give me this cylinder.
+And so now I know when it is the cylinder. I go by 2 pi times the radius times the height. 
+Okay 2 pi, now the radius here notice I just chose an arbitrary value here this was going to be an arbitrary y value I could have chosen anything between c and d so that arbitrary value that I chose for that one particular cylinder is y and that is going to be the radius because the radius of this thing goes from the axis here to the edge and that is why. 
+It is how far the distance is and when you are measuring vertical distances you are getting the y values of these functions.
+Okay so now the height of this cylinder. The height, you know if you stood this one the height of the can would be this so here is your height and that height is actually the distance from here to here. So it is the distance between those two curves. 
+So the height will be the, you know, we are measuring the horizontal distance again. It is an x value because it is horizontal and so we need to take the biggest x value which is the p(y), the furthest to the right is the larger xs, minus the q(y).
+And of course dy and then we are going to integrate and we have got all ys here so we need to look at what possible ys that I choose you know for that one representative shell that I was doing and it was anything between c and d so that one y was just one random sample from c to d.
+Okay so these are you four methods and I mean not four methods, two methods and depending which axis you are rotating it around you know you are setting it up differently.
+Now you can try to memorize these formulas but it is much easier if figure out what method am I doing? Am I drawing a washer? That means it is the outer, the bigger circles area minus the smaller circles area and the cylinder is 2 pi r times the height and it would be much easier to do these if you think of it geometrically like that than using a formula.
+
+
+Okay so the region here is the function y equals 2x-x^2.
+Now I know this is a parabola. That is easy to tell and it is a parabola going downward because the x^2 term is negative.
+And the simplest way to graph that is going to be going just factor it. If I look at it I can see that x times 2 minus x is the factorization and that means that 0 and 2 are the x intercepts.
+So that quickly gives me some points on that graph.
+So 0 and 2, I want to draw this pretty big so it is large enough we can tell what it is.
+Now half way in the middle if those are the two, if these are your x intercepts then the vertex has to be half way in the middle.
+So x equals 1 is where my vertex is locate. And so if I just find f(1) I will get the y value for that vertex
+So I will end up getting just 1. So (1,1) is the vertex of that parabola and we do know it is going downward. 
+Okay the other one y equals x we know that is just a line. It is the line going through (0,0), (1,1) so I can see that those are the two points of intersection and it is just going to be kind of flat here.
+I did not get a very good picture. So it is a really skinny region let me see if I can enlarge that.
+Okay, so I really just want to go all the way over to 1 and I want to exaggerate this a little bit. So my parabola is going to be really curved so that I can distinguish it between a straight line and here is my straight line y equals x.
+Okay and we really do not care what the rest of that parabola is doing.
+Okay we have now got our shaded region in here and we are revolving this around the x axis. Okay, so now lets look at two different methods to do that. 
+It is going to be the same solid either way so we better get the same answer. If I am going to do this one by the washer method, then my axis this is the x axis so I need to choose my representative rectangle perpendicular to that axis.
+Now notice I could have chosen that anywhere from 0 to 1, okay, for the x values. So those are your bounds for your region, your x values, that are your bounds.
+So now pick any arbitrary values that is just some random x so I am just going to put x here between 0 and 1. Okay so now if I revolve that thing around the x axis what I am going to get, I am going to end up getting this washer.
+Okay, and I just want to figure out what is the volume of that. Well I know that area will just be the area of the bigger which is pi r squared minus the little circles area and then times the thickness which will be some delta x.
+Okay, so setting this up using the washer method. Okay, pi r squared, what is the radius of that bigger circle?
+Well the radius of that bigger circle would be to here. Okay so that is the outer radius. The radius of the inner circle would be right here. 
+Okay, that outer circles radius, it goes up to the curve y equals 2x-x^2. So pi times, I am going to go ahead and stick the pi outside. Both of the areas, the bigger circle and the inner circle, we are going to have pi r squared. So putting it outside, the biggest radius will be 2x-x^2. So that squared, minus, and now the smaller circle, the radius for it will be up to the line, it is that y value, that height to the curve y equals x.
+So this distance right here. So it is going to be the y value which is x. Of course dx since we have got xs on our equations.
+Now the x that we chose was anything between 0 and 1. Okay, so now to actually integrate this I would need to distribute all that out and then combine like terms. So that is pi times the integral. Lets see I have got 2x^2 so that is 4x^2. Multiply them together and double so minus 4x^3 plus x^4 and then minus x^2.
+So then we have got pi times x^4 minus 4x^3 plus 3x^2. It is still 0 to one and now integrating we are going to have x^5/5 – x^4 + x^3 and then evaluated it from 0 to 1.
+So now when you plug in 1 to everything you are going to get pi(1/5) - 1 + 1. So pi/5 because the 0 plugged will give you 0 for everything.
+Okay so now let us set this one up using the shell method. Using the shell method rotating around the x axis to get a cylinder, we are going to have to take a representative little rectangle parallel to the axis of rotation. Okay so now when you rotate that, you are going to have this cylinder.
+Okay and now we need to find out what the volume of that cylinder is going to be. Okay now I chose a random value here. I could have chosen anywhere from y equals 0 until I got this point so that is also y equals 1 because this point was (1,1).
+Okay so I chose random y value for that one particular cylinder between 0 and 1. So my limits of integration will be 0 to 1 and I am choosing a particular y value. Now that y value there corresponds to the radius of that cylinder.
+Okay, so when I am trying to set up using the shell method, you are going to always have the integral of 2 pi, so 2 times pi times the radius times the height. 
+Okay, the radius of that cylinder goes from here up to that arbitrary y value that I chose. The height of that cylinder, well the height of the cylinder is pretty small. The height is actually given by this distance right here.
+That distance is the distance between those two curves and it is horizontal so it is an x value. It is actually the difference between those two in terms of x.
+So now if I took this point which is the x coordinate on this graph I know it is x equals y. This point over here though is the x value on this parabola and I have got to get the x value for that. So to get this one's x coordinate, it is dependent on the function and a particular y value that I have, I have got to solve that for y, for the x.
+Okay so to solve that for x, I notice the x is in the equation. There is one that is squared and one that, the first one is a quadratic in terms of the variable x.
+Move everything to one side to solve a quadratic. I am going to move everything to the left to make that x squared positive.
+X^2-2x+y equals 0. To solve for x, x is your variable, you treat the y as if it is a constant. You are going to use the quadratic formula to solve it.
+So the x, because you are not going to factor with the y there. The x is going to be negative the b, so positive 2, plus or minus the square root of the b squared, so that is negative 2 squared, minus 4 times 1 times y. The whole thing over 2 times the 1.
+Okay so now I can take a 4 out from under the radical and pull it out which will give me 2 outside the radical so this comes out to be 2 plus or minus the square root of, plus or minus 2 times the square root of one minus y over 2.
+And notice I can take a 2 out of every term in the numerator and so this becomes 1 plus or minus the square root of 1 minus y.
+Just do not cancel those first 2s, you have got to factor it out everything in the top to cancel with the 2 on the bottom.
+Okay so now what we need to do is figure out which of these xs is it? Because you have got two different equations here.
+Well if you remember that parabola, we actually had two different halves of that parabola.
+The bigger half is obviously the one over here. So I want the smaller of these two xs to get the one that is on this side of that region.
+So I can ignore the one that has the plus sign and I know that this one right here is x  equals  1 + the square root of one minus one y.
+Now that will be the x value. So now setting up our integral, we have the radius. We were trying to figure out the height and the height was this distance right here okay which is the x value of the curve that is to the right. So x equals y minus and then x equals whatever this side of the curve was which is this one right here.
+So x equals one plus the square root of 1 minus y.
+And you can see why maybe you would have wanted to choose the washer method for this one because this one is not a pretty problem here but it is just 2 times pi times the radius times the height, and that is the way we would set it up. And then you have 2 times pi. You span that out. Multiply through by the y. You are going to have y^2 – y – y times the square root of 1 minus y.
+Okay, and you are still integrating this. The y values were between 0 and 1. Okay now we can integrate this y squared and the y. The problem we are going to have right now, I mean this can be integrated, but right now we really do not have the tools to be able to do this. So this is a much more difficult integral to evaluate. 
+I am just going to leave it here but if you evaluate it you can actually put this in your calculator. You just enter this function and go to calculate and then I think option 7 is finding the definite integral and you do the definite integral from 0 to 1 and then multiply by 2 pi. You better get the pi/5 because that is the answer to this definite integral, but choose it based on which is the simpler integral to evaluate.
+So that is how you decide which method to use. Sometimes one of them is set up to be easier, one method, than the other.
+Okay one more just quick one I just want to set these up and show you how to set them up. I will not actually evaluate it. I am looking at the region y equals x^3 and y equals 8 and x equals 0 which is the y axis.
+Okay, so the region that we are referring to here, the one that is going to be shaded, is actually this region in here. Okay and we are going to revolve this around the x axis again.
+Okay setting these up, if I am revolving around the x axis using the washer method, I need to look at a vertical rectangle. So I am just going to pick some arbitrary number. I could have picked anything from here over to this x value because that is where the shaded region is trapped between the x axis.
+So I need to figure out what the point of the intersection is. That is the curve y equals x^3. So x^3 would be 8 to figure out where that horizontal line. That means the x is 2. Okay so this is x equals 2.
+Okay so now revolving that around the x axis we are going to have this washer and I just need to figure out what the radius of the bigger one is and the radius of the smaller one. So the washer method.
+The washer method is pi r squared minus pi r squared. So here is our pi The outer radius is from the axis from here all the way out to here. So that goes up to the line y  equals  8.
+So that is going to be 8^2. And that would have true for any of those rectangles we have chosen.
+Now the inner radius is this distance right here. And that goes up to the curve y equals x^3. Now it is a vertical distance so just be sure you ask yourself that. To measure a vertical distance you want y values. So it will be the y values for that function. So we are going to have minus x^3 squared.
+So pi r squared, we have got the radius squared minus the radius squared. And so that would be how you set it up. The limits of integration or the x values that region is trapped between is from 0 to 2. 
+Okay, so just clean up a little bit. 64 minus x^6. 
+Okay, the second method. Now we are going to use the shell method. So the shell method you take a representative rectangle parallel to the axis. So I am just going to pick this one. I could have chosen anywhere from here to here. So the y is anywhere from 0 to 8.
+Okay, taking this and rotating it around the x axis just creates this cylinder. So I just need to figure out the volume of that cylinder. So the shell method will be 2 times pi times the radius.  The radius of this cylinder is from here, the axis out to the edge of that cylinder where that representative rectangle was. And now we could have chosen an arbitrary y value there, anything between 0 and 8. 
+So our limits of integration are 0 to 8. That particular y is our radius. And now the height, the height of this thing is this distance right here. That is the height of the cylinder if you stood it up. 
+So that height is an x value because it is horizontal and it is the distance between the y axis and the line y equals x^3 but we need to know the x. What is x for that curve? The x is y^(1/3).
+So I am going to have y times y^(1/3) and then of course dy.
+Okay, so if you integrate both of these you should get the same answer.  And I will leave that for you to do.

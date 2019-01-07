@@ -1,0 +1,95 @@
+﻿SLIDE 6-2
+Okay now we are going to look at doing volumes by shells. Now if we were taking a region, we have got this region R, and rotating it around one of the axes
+Lets say we are rotating it around the y axis
+If we were using the washer or the disk method, in this case we would need to use the washer method because the region does not go all the way to the y axis. It stops. 
+So if we were doing this around the y axis by the washer method we would take the region, a little piece of it going horizontally here,
+Rotate that around the y axis and I would create a washer that I would them be able the area of and then accumulate those washers to get the entire volume of the solid.
+Well now instead of when we were doing it that way we were doing is we were slicing this region perpendicular to the axis of rotation. We were revolving it around the y axis and we were taking the slice perpendicular to that axis
+To use the shell method what we will doing is we will be looking at a segment or a representative rectangle that now is parallel to the axis that you are rotating it around. 
+So if I am rotating it around the y axis I am going to look at it piece of it here and then I am going to look at what happens if I take that one little representative rectangle and rotate it around the y axis
+Well what you're going to end up getting then is you are going to end up getting this shell. It is a cylinder it is a cylindrical shell
+And so what we want to do then then is we are going to accumulate the volume of each of those shells until we get the whole solid 
+So in this picture to the right you can see that we have this shell here that is formed by one little piece here that is parallel to that axis that you are rotating it around and we are going to find then what the volume of this one little shell is here 
+Okay, well that shell is a cylinder so what we need to do then is figure out what the volume of that cylinder
+
+
+SLIDE 6-3
+Okay, so the way we do that is we are going to look at that first where that region is 
+We are going to divide that region from a to b into little sub intervals so we are going to be looking at this one little sub interval here this delta x is just our representative value its just a specific x value there 
+So we are going take that one little piece that little rectangle and the width of that rectangle is going to be the delta x
+If I take that region the one that is shaded there and rotate it around the y axis I am forming the shell that is in this picture to the right
+Now I want to find what the volume of this shell is here and now notice the shell has a thickness to it because of the thickness of that region that we rotated 
+Okay so if I want to find what the volume of that cylinder is the way I want to do that is I want to think about what will that cylinder look like if I cut it down the side and uncurled it
+
+
+SLIDE 6-4
+So if you cut that thing down the side and then open it up and then curled it what you are going to end up getting is you are going to get this rectangular prism 
+So it looks like a rectangle from the top but it has a thickness to it this thickness to it here is this delta x 
+Okay so now if I want to find out what is the volume of the cylindrical shell well I can find that by taking the area of that rectangle and then multiplying it by the thickness 
+So the area of the rectangle well a rectangle is just going to be the length times the width so whatever this length is times this width and then times the thickness and the thickness is our delta x
+Okay now the width of it will be whatever this height is here. Okay so that is just going to be the width of this rectangle when I uncurled it, uncurled that prism that cylindrical shell.
+So now that is determined by my function okay so we have our f(x) and the f(x) is determining where this piece is because remember the region that we had in the previous slide went up to here  
+So this was the slice of that region that was getting rotated. So the height there is being determined by the function because the function is what is up here at the top defines that region
+So the height will be the f(x). The length of this, well the length of this rectangle will be just whatever this distance was all the way around that circle because when you uncurled it that would be corresponding to that length. That is just the circumference of a circle
+So this length here is just the circumference of the circle that you had in this previous picture of that shell
+Well the circumference of that circle, the formula for circumference of a circle is 2 pi times the radius 
+Okay so we know what the radius of that circle is then we can get what that length that circumference would be which is the length of this rectangle 
+So the radius will be from here to here. Okay so its from that axis that you are rotating it around out to where that little rectangle was that you were considering 
+So once, when you want to find what the volume is of this rectangular prism, it is going to be the length which is 2 pi r which is the length of the circumference times the height which is here which is just the f(x) and then times the thickness delta x
+
+
+SLIDE 6-5
+Okay, so now that was the formula for one of these cylindrical shells so one of these things and we are doing is we are nesting these things inside of each other 
+so once you do one of them and then accumulate these okay remember you divided that interval a b into n different little sub intervals that you then rotated and created these n different cylindrical shells 
+And now as you increase the number of shells it is going to look closer to what the solid does the more and more of the shells that you get the smaller those little regions those delta xs are the more of the cylindrical shell you are going to get until you actually find the volume of that solid 
+so you got your 2 pi times the radius. So 2 pi times the radius and that gives you that circumference of that shell which is the length of that rectangle 
+And then times the height f(x) is the height and then delta x is just the thickness and so that just becomes our dx when we start integrating 
+So taking the limit of the sum of these n cylindrical shells areas or volumes it is just going to give the definite integral 2 pi x times f(x)dx 
+So your f(x) is the height here and the x is corresponding with that radius 
+
+
+SLIDE 6-6
+Okay so now to do these you have got to draw the picture.
+ I have got a region R here I am going to be rotating this thing around the y axis take a representative rectangle here rotate that and you can see the shell here in the picture
+Now I want the volume of that. Keep in mind the volume of a cylindrical shell when you uncurl it is just that big rectangular prism and so the volume of that thing will be 2 pi time the radius right because 2 pi r gives you the circumference which is the length which will be the length of that rectangle 
+2 pi r times the height. The height is this distance right here which corresponds to this height right here which in this case is actually bound between two curves 
+So f(x) is the upper bound and g(x) is the lower bound so if I want this distance it is actually going to be f(x) minus the g(x)
+And so then the volume of this solid then is just going to be 2 pi times the radius and my radius is the x. It is the distance from here out to here which is the x value so 2 pi x times the height which is f(x) minus g(x)
+So this is when you have a region that actually is bound between two curves
+The one before was where we had just one curve and the g(x) went all the way down to the x axis so f(x) would have been just the height
+So this will be, we are going from a to b here
+So that is how you get the volume using the shell method
+
+
+
+
+SLIDE 6-7
+Okay, so keep in mind this is the circumference of the shell 2 pi r, 2pi times the radius and this is the height of the shell so if you can picture the shell and just think the shell method I want to do the volume by doing 2 pi r times the height 
+And then that will help you to get that volume which you be able to picture and see that shell so that you can tell what the radius and what the height of that shell are going to be
+
+
+FINAL SLIDE (Example)
+Okay so one example here. I got this region R you have got to draw your picture so the curve is f(x)=sinx^2 and the region is bound below by the x axis so its going all the way from the x axis up to that curve
+The vertical line we are looking at is of course here is the origin and the vertical line over here is where x is equal to the square root of pi/2
+So that is your region you can see it shaded there. I am revolving around the y axis so I am going to take a representative rectangle here that is going to be revolved then around that y axis and when I do revolve this around the y axis I am going to create the shell this cylindrical shell like that
+Okay, so the volume is going to be the integral of, we are doing the shell method so since we are trying to get the volume of that shell instead of a washer or disk,
+2 pi times the radius. Well the radius of that cylinder you see the cylinder in the picture the radius of that cylinder goes from here to here 
+Well what is determined by what goes from the y axis until it goes hits this curve the sinx^2. Is that an x value or is that a y value?
+That radius because its horizontal is an x value what is the x value well the x value that was just an arbitrary x okay 
+It is not something that is specific to the curve other than we chose a given x here to get that representative rectangle 
+We will have to actually get representative rectangles from here all the way out and each one of these little pieces would generate its own little shell 
+So we are just choosing an arbitrary x here to get our shell. So the radius will be an x value just a arbitrary x value
+Now the height associated with this given x value is the y value at that point and the y value is determined by this functions y value which is sinx^2. So we will have sinx^2, and then our dx is the thickness of that shell
+Okay so now we have got variables x for variables of integration so we need to know t=what are the x values that this whole solid is going to be lined between
+Well x=0 and the last x that we are going the choose would be the square root of pi/2
+So from 0 to the square root of pi/2
+Integrating this you are going to need to use a u-substitution. I am going to let u=x^2 since it is not just the sin of x and my du then will be a 2x 
+And so this 2x here with the dx will be that du. I am going to go ahead and pull the pi out, get it out of my way, and so now I am going to substitute 
+I am replacing the 2x dx with the du and you now have sinu du
+Now if you want to go ahead and change your variables of integration, you were given the original values for x were 0 and square root of pi/2 
+And so now the values for u will be 0 and u will be, the x^2 each time, will be just pi/2. So our new limits of integration then will be 0 and pi/2 and so now integrate sin(u) we are going to get cos(u), now be careful 
+The derivative of sin will be cos but the derivative of cos will be negative sin so I need a negative here I always look at what I get for the anti-derivative and then think about taking its derivative and so the derivative of this cos will actually have to have a negative so I need to put it there
+So cosu I am going from 0 to pi/2 and I am also putting this negative, this pi up here in the front so I will just do it that way
+Okay so now putting in my pi/2 I have negative pi times cos(pi/2) minus a negative pi times cos(0)
+Lets see cos(pi/2) is actually 0 and then I have a plus pi times cos(0) is 1 so that comes out to be just pi 
+So this curve is called the sin bowl because it is formed by the sinx^2 this solid that is in this lower picture here is, has volume pi cubic units

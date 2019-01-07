@@ -1,0 +1,74 @@
+﻿Okay, we are going to find volumes now and the first kind we are going to look at is some solid where if we sliced it all the cross sections are going to look the same.
+
+
+Now the idea here is that we got this solid that is sitting on the x-y plane. If we took one slice of it here, if I can find the volume of that one slice, then all I need to do is find the volume of all the slices starting from the x equals a to the x equals b down here, and so I am going to integrate to get the sum of all of these volumes.
+
+
+So, find the volume of the kth slice and then integrate it from x equals a to x equals b, and of course part of the volume there is that delta x.
+So you are going to be looking at the integral of the area of that one kth slice times the width of it which gives you the volume.
+Okay, so our goal here is to figure out the area of one slice of it and then use the integral to accumulate, to add all those volumes together.
+Okay, so the splicing method. Suppose a solid object extends from x equals a to x equals b and the cross section of the solid that is perpendicular to the x-axis. If A is an integrable function on the interval from a to b, the volume of the solid will be the integral of the A(x)dx. 
+So the idea here is we are trying to find this volume here of this solid. We are going to do it by splitting it into smaller little pieces here, these volumes of these one little slices, and then as you let the number of slices increase here to here you are getting closer and closer to what the actual volume of the solid will be. 
+
+
+So you are summing up all of the volumes of the slices then you are going to take the limit as n goes to infinity and that translates to that definite integral.
+
+
+Okay, so now we have a solid that has a base that is bound by these curves, y equals x squared and y equals  2 -  x squared, in the x-y plane. Cross sections. They are telling us what where to get these cross-sections. Cross sections through the solid perpendicular the x-axis are going to be semicircular disks.
+
+
+So we are slicing it perpendicular to the x-axis so slice down this way is going to give us this disk and they tell us it is a semi-circle. I want the volume of the whole solid. Okay, so one cross-section, and notice what the boundaries of this thing are. Our boundaries are the curves y equals x squared and y equals 2- x squared. So that is telling us where the bottom, the bottom of that solid looks like.
+
+
+So let me draw those a little bit so I can see them better here.
+
+
+So this is the base of the solid. And I am told that if I slice it perpendicular to the x-axis so slicing it this way, this will be the bottom that one line that would go across the bottom of that solid. I know that I have a semicircular disk here. So this will be the actual bottom of my slice. 
+
+
+If it is a semi-circle the things coming up over that line there, what I need to do is figure out the area of that one semi-circle. I need the area of the one semi-circle and I know that is just going to be 1/2 pi r ^2 because the area of a circle is pi r^2. So now my integral to get the volume is going to be the integral of the area of a semi-circle. 
+
+
+Okay, and then I would need to know what x values that it is between. The x values region it is between are these which are going to be where the two curves intersect.
+
+
+So if I have  x squared   equals  2- x squared 
+I get 2 x squared   equals  2 
+so x squared   equals  1 
+so that is x  equals  1 and x  equals  -1
+
+
+Okay, so we go from -1 to 1.
+
+
+And now the area of the semi-circle. All I need to know is what the radius is.
+
+
+Okay so now I need to find the area of that semi-circle which is based on this which is the radius, this will be the diameter of the actual semi-circle. So this right here is this bottom that will be the diameter of this semi-circle.
+
+
+So if you look at this length then, half of that is going to be the radius. So to figure out what the distance is, I can take this function's value minus this function's value. 
+
+
+This top one is y equals 2- x squared and the lower one is y equals x squared. So the radius is equal to half of 2- x squared, the upper bound minus the lower bound which is x squared. So the radius then will just be 1- x squared 
+
+
+Okay so when we set this integral up, I just need to put the area of that one slice and then I will have the dx and then I am going from -1 to 1 to add up all those slices, those semicircular disks 
+
+
+So the area of that one semi-circle is going to be 1/2 pi times the radius squared because it is a semi-circle and the radius we know is 1-  x squared 
+
+
+ so 1/2 pi r^2 dx
+
+
+And this will give us what the volume of this solid will be. You can go ahead and finish this. I will pull out the 1/2 pi out in front. I would need to square this out. I cannot use a u-substitution since I do not have an x outside the parenthesis. So I would have 1-2 x squared  + x^4 and that is going from -1 to 1 still so I am going to have just use the power rule.
+
+
+So you are going to have x-2x^3 /3 + x^5/5 and all that is evaluated from -1 to 1 and then I have the 1/2 pi out in front of this entire thing. Let us see what that answer should be.
+
+
+Should come out to be 8pi/15
+
+
+So that is just evaluating that out.

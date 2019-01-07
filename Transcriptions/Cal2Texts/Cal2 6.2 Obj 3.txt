@@ -1,0 +1,139 @@
+﻿Okay, now we’re going to integrate with respect to y.  Now when we looked at the area of the region between two functions y = f(x) and y = g(x).  So they were functions of x.
+So we had something like that and something like that. And we just looked at a vertical rectangle to get what that one rectangle’s area was going to be here and added up all the rectangles.
+There’s nothing magical about having functions of y and using vertical rectangles.  It was just easy because the functions actually gave us height.  Y is that distance above the x-axis.
+So it’s easy to get a height that way.
+Now sometimes though you won’t be given equations that are functions of x like this.  You might be given something that is a function of y so that the equation will be in the form x=f(y).
+So it’s not your function of x like you had before.  So if you drew a vertical line, it’d actually intersect it in more than one spot.
+So you have to be flexible enough to be able to look at what if they give you equations that are in a different form.
+We still want to get the area between these two functions.
+Here’s x= f(y) and here’s x = g(y).
+So they just have given you functions that were solved for x.
+Okay, so now to do it without trying to solve it for y, because that creates a whole lot of problems because you can’t always solve it for a unique y.
+What you need to do is look at horizontal rectangles.
+Because our boundaries, the curves, are actually on the left and right now, are rectangles are going to go from left to right.
+So if I want to find that length of that rectangle, the width is easy.  Because I will be taking this interval from c to d, those are the y-values now.  They’re constant y values that the region is bound between.
+But my x values, the left and right boundaries are what’s variable, what’s determined by those curves.
+So what we’re going to do is draw rectangles going horizontally, and we need to find what is the length of that rectangle.
+The height will be the delta y.  So what you’re going to end up with here is you’re going to end up with an integral with y’s for the variables.  
+So finding the area of this one rectangle.  Okay, so what I need to do is the height of it here is my delta y the length of it here is the distance between these two functions.
+Now, what between the two functions?  It’s not height.  It’s actually a horizontal distance between the two functions.
+So I want to find what is this distance here.
+Now, to find that distance, what I want to look at is I want to look at the x values of those points.
+The distance from here to here will be the distance in those two x values because the distance now is measured horizontally.
+So this distance will be the length of that rectangle.
+To get that, I need the x values. Well, the x value is given by this function. That’s x=f(y)
+This one’s x value is determined by x=g(y).  So I’m going to use those functions of y.  I’m going to use those equations for the x values to figure out what the length of that rectangle is going to be.
+So that one rectangle’s length here will be the bigger x value, which think of the x-axis.  The bigger x values are down here on the x-axis and the smaller ones are down here.
+So if I’m trying to get this distance, I’m going to take the bigger one, which is the one on the right, this is the bigger x value of the two. And minus the smaller one.
+Now if you want to see a real simple take, put two points on your graph. Let’s say I have the point (4,2) and I have the point (-1,2).
+How are you going to find the distance, that horizontal distance between those two points?
+You’re going to subtract their x coordinates.  This one has an x coordinate of 4.  This has an x coordinate of -1. 4 minus the -1.  The bigger x minus the smaller x gives you that distance horizontally.
+So any time I’m drawing something horizontally, I got to readjust that I’m subtracting x values now to get distances, not the y value.
+Okay, so setting up the area of this one rectangle, I’m going to take the bigger x, which is the f(y) minus the smaller x which is the g(y). X is the g(y).
+Okay, now because we would have rectangles starting here where the region began going up and down all the way til we get here, our limits of integration are going to be the y values along the y axis where that region’s bound.
+So and then of course the width of this one rectangle was our delta y which translates to the dy when we go to the definite integral.
+Okay, so this is the formula for getting the area between two curves where there given in the forms of x=f(y) and x=g(y).
+Now this one is where we had a constant value for y=c and y=d. 
+It’s not always going to be 2 horizontal lines.  It could be that one of them is a horizontal line.  Here’s y=c. And the top one might be a point of intersection. Just figure out what is the y coordinate of that point.
+Or it could be the one with the two boundaries.  You know, the upper and lower boundaries might be indicated with some point of intersection.
+So just figure out what is the y value there and the y value there. A general rule of thumb is if you end up with y’s here, you’re going to have a dy here and you’ve got to have limits that match.
+
+
+
+
+They’ve got to be the y values that the area is bound between.
+Okay, so now with respect to y, we want the area of the region.  We have two continuous functions where we have f(y) is greater than or equal to the g(y) on that interval c to d.
+So the area bounded by x=f(y) and x=g(y) is given by this.
+The f is bigger, meaning it’s farthest to the right, which is where the bigger x value occur.
+Here’s one boundary and here’s the other boundary.  Here’s the larger one.  Here’s the smaller.
+And this is how we would set up the sum of all those rectangles to get that definite integral.
+Okay, so let’s look at a problem. We want the area of the region bounded by these graphs.
+Okay, now the graph y=x^3 looks like this.
+Y=x+6 looks like this.
+And the x-axis.  So our other boundary would be here.
+So all those three functions.  The area that’s bound by the three of them would be this area in here.
+So now we can set this up just like we did before. 
+I’m going to remind myself that the x-axis is just y=0.
+Now if I were setting this up using vertical rectangles, the farthest left rectangle would start here and the farthest right would end up here.
+I would need to find those x values.
+And this one I could find where the x-axis intersect y=x+6. And then y=0. So this is -6 here.
+And then if I want to find where this other point of intersection is I would take x^3 equal to x+6..  Solve that or just use a calculator to find that intersection or just guess based on the picture.  It looks like it’s around 2.
+If I put 2 into both of these y values I would get 8 for both of these two equations.  That’s the point. (2,8).
+So now, if I were setting this up with vertical rectangles, I would start by placing my rectangles here.
+Where’s my upper and where’s my lower bound in this first region and is that going to change at any point?
+For that all the way til I get to 0, my upper bound is y=x+6 and my lower bound is the x-axis.
+But as soon as I cross over the y axis, in that shaded region the upper bound is still y=x+6 but my lower bound is y=x^3
+So I’m going to have to split it to 2 intervals.
+So if I were doing this with respect to x, I would set it up as upper bound, x + 6, minus lower bound, which is zero. And that’s from -6 to 0
+And then add the second one. The upper bound will be x + 6 minus the x^3 because that’s the lower bound of that second half. And that would go from 0 to 2. Those are my x values.
+So that’s how you would set up the integral to get the area using it with respect to x.
+So now let’s see what it would get with respect to y. 
+So now what I’m going to do is consider horizontal rectangles.  Where would the first horizontal rectangle go?  Where’s the lowest point for the shaded region?
+It’d be right here.  Here’s where my lowest horizontal rectangle would start.
+Now I’m looking at upper and lower for the y values.  And I’m going to start drawing my rectangles in here.
+And the last one would occur around here.
+Now notice, in that entire region. Now when you’re doing horizontal you’re looking left and right boundaries for the curves.
+The left boundaries for every one of those rectangles is the line y=x+6.
+The right boundary is the curve y=x^3.  And that’s true for every single one. Every single one of these stopped on that curve.
+I didn’t have to worry about the x-axis at all.
+So if I’m going to set this up with respect to y, I only need one integral because it’s the same left and right boundaries for the entire shaded region.
+So that’s the advantage of being able to do it both ways because sometimes it’s simpler if you can be flexible enough to set it up both ways.
+So set up your integral I want the biggest x value minus the smallest x value the biggest x’s are the farthest right.  So it’s going to be x^3 minus (x+6), the smallest one.
+So I’m doing right minus left when I’m doing my x’s.  I want my length for each one of those horizontal rectangles.
+Now let’s see if we can back this up and actually get it right this time.
+Okay, I’ve got to pay attention to what my equations are.  My equations are y=x^3… that’s not giving me an x value.  That’s giving me a y value.
+I can’t use that if I’m going to be using the horizontal rectangles.
+This is the same as x equal the cube root, so I’m just going to write it as y^(1/3)
+And this other one, I can’t use the y.  That’s giving me the height, not the x value.  I’m not getting that horizontal distance.
+I’ve got to rewrite as x=y-6
+These are the equations that’ll give us that horizontal difference.  We’ve got to subtract their x’s.
+Okay, so now the rightmost x value is y^(1/3)
+The leftmost y value will be y-6.  Be sure you put parenthesis there. You’ve got to be subtracting the entire left boundary.
+Now the way I caught myself on that one was I realized I knew I needed to go between 0 and 8 for the y values since I was doing horizontal rectangles, but I didn’t have y values in my integral.
+So you’ve got to make sure everything is consistent there and that helps you catch your mistakes.
+So I did the right and left boundaries, which now have functions of y.  My lowest y value is y=0 and my upper y value will be y=8.
+These two should give you the same exact answer whether you integrate the two in blue or integrate the one that’s in green here.
+It’ll be the same answer.  You just have a different variable of integration.
+Okay, so now I’ll let you finish that out.
+Let’s look at another one.  And just in case you’re curious though for that one, the answer should be 28.
+Nothing tricky about doing that integration.
+Okay so I want to look at another problem here. I want to find the area in the first quadrant bound by these two functions.
+X^(2/3) looks something like and then y=x-4 will look something like this.
+Okay so the region that we’re looking for the area of is in here. They want the part in the first quadrant only.  So the last boundary here is x-axis.
+Okay, so looking at that region I want to look now at vertical rectangles.  The first vertical rectangle is going to fall right here. And I would continue to put vertical rectangles all the way through here.
+Will the same function be the upper bound the entire time until I get over to the other edge of that region?
+Well the same upper bound will always be y=x^(2/3).
+Well what about the lower bound? Well you see that when we started the lower bound was the x-axis.  But when I get right here, it’s going to change.
+It will no longer be the x-axis.  The lower boundary is going to be that line y=x-4.  So because of this change right here, I’m going to have to split it into two separate integrals.
+So if I were just setting this up with respect to x, I’m going to have variables of x.  I’m going to have upper bound which is x^(2/3) minus the lower bound.
+Okay now be careful here.  We’re going to split it into 2 parts. I’m going to go ahead and do the first part which is just the x-axis, so minus 0.
+Plus and now I have x^(2/3) minus the lower bound, which is x-4.
+Now I need to figure out where these points are. This is where y=x-4 intersects y=0. So that’s x=4.
+This one up here, the easiest thing to do would probably be to plug in a few points or to use the calculator.
+Let’s see, if I put in x=8 (I know it’s bigger than 4).
+If I put in x=8 into this function, I see it’s going to have y=4.  If I put it into this one.  I get the cube root of 8 is 2,  and then squared is 4.
+So that point is in common, so that is what that’s point coordinates would be.
+Setting these two integrals up we’re going from 0 to 4 for this part of the area and then 0 was the lower boundary.
+And the second one from here to here was when x-4 was the lower boundary and our limits of integration will be from 4 to 8.
+So that’s one way to set it up with respect to x.
+If I was setting this up with respect to y, I would look at my horizontal rectangles.  
+And I would ask myself what about the boundaries here? Do I have the same left and right boundaries the entire time? That’s when I usually want to do it with horizontal rectangles.
+Here’s my first one.  Every one of these is touching y=x^(2/3) on the left. And every one of them is touching y=x-4 on the right.
+So if I’m going to set this thing up with respect to y, I want to find out what is my right boundary and my left boundary.
+Right is the biggest x’s, which reminds me also I need to have the x’s here.
+Take this equation, rewrite for x. x=y+4. And the same thing with this one.  I’ve got to know what the x’s are for all these points if I’m going to subtract to get that horizontal distance here.
+So x, I’m going to raise each side to the 3 halves power.  So that’ll be y^(3/2).
+So now, setting up my integral, right boundary is the x coordinate which is y+4, that’s the x coordinate for every point on that line.
+Minus the x coordinate of the left boundary which is y^(3/2).
+And my limits are going to be y because I have y for my variable.  So my smallest y for all the region is y=0
+And the upper y is y=4. So if I evaluate these two integrals, I better get the same answer.  It doesn’t matter which one you do.
+And you should come up with 96/5
+Now one other thing that I just wanted to point out here, you didn’t have to do it one of either one of these two ways. 
+You could have also set up the area of the region. 
+Just because this region cut out here is just a rectangle, you could have just said okay what’s the area under this function y=x^2/3.
+So I calculated that, that would be the integral of x^(2/3).  That gives me the entire area from here down to the x-axis
+That would be the entire region there.  And that would be going from 0 to 8.
+And then I’m going to subtract this little rectangle area.  A rectangle is half the base times the height.  The base is was just 4.  And the height of that rectangle will also be 4, whatever that y value is. 
+So that’s 16 divided by 2.  So that’s 8.
+So that’s a third way.  That’s a geometric approach to it.  If you just wanted to do the area of that one function and then use geometry to get the area of that triangle you’re going to take off.
+So you have 3 integrals that better come out to be the same thing.

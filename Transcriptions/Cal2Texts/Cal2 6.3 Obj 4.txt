@@ -1,0 +1,117 @@
+﻿Now sometimes we want to take a region and form a solid by rotating it around the y-axis
+So we have our disk and our washer methods the same ways just now 
+If we are revolving around the y-axis we are going to be looking at slicing this solid horizontally 
+So you are going to be looking at a representative rectangle that is horizontally instead of vertically
+So now p and q are continuous functions and p is larger than q 
+Now p(y) greater or equal to q(y)
+That means that these are x values so they are saying that this is the larger x value of the two 
+So that means p(y) will be further away from the x-axis than what q(y) is going to be 
+And this is saying that also that both of them are positive 
+So they are both positive that means they are both 
+X values for each of those, the graphs of those curves, are both going to be to the right of the y-axis
+So we are going to start with some region 
+let us see the region we are referring to, this picture 
+We have got a region here with our function x  equals  p(y) 
+So this is x equals p(y) 
+And then we have the region x equals q(y) 
+Which would be sliced through here 
+And you can see that the x values for p are greater than the x values for q 
+And now the way you look at x values is its how far from the y-axis the curve is 
+So you would be looking from here all the out to the furthest curve 
+That is the x values for p(y) 
+And the x values for q(y) would be the axis of rotation to here 
+So now what we are actually rotating then is just that little segment then 
+That little piece here in between the two curves 
+And when that is rotated around the x-axis you are generating this washer. Now this is a real thin washer 
+Does not have much of an area to it 
+So the outer circle that larger circle is determined by that distance, the x from p(y), and the inner circle the one that is cut out this thing is determined by the x value from q(y) 
+So from here to here. That is the radius of the smaller one, and from here to here is the radius of the larger one 
+So when you determine the area of that washer 
+You will take the area of the larger circle 
+Which means you are taking the radius 
+This is your radius of the larger one, so it is pi times that radius squared 
+pi times the radius is the x value.  So x  equals  p(y)
+So this is the radius squared, and then minus pi times the radius of the smaller circle, pi r squared, and r for that one is the smaller circle from here just to the curve q(y) 
+So there is your pi times q(y) squared. They just had the pi factored
+Now if q is zero you had a region that was all the way from the y-axis out to just one curve, p(y) 
+Then of course you are not taking a circle out of the middle of it 
+So you are going to end up with pi times the outer radius squared and that is your washer method
+I mean the disk method
+This is your disk where you got the solid circle 
+And so what you got here is a region that is defined by some x equals p(y) 
+so when you revolve it you are going to end up this whole solid it is going to be a washer coming like this but it is going to it will now be a hole in the middle since there is no inner curve that actually causes this space there
+So let us see if we can look at a problem
+
+
+
+
+
+
+Okay so we have got a region in the first quadrant and it is defined by x equals  y cubed 
+Now x equals  y cubed 
+You know y equals x^3 looks like
+ x equals  y cubed  will look like this
+And x equals 4 y which that is just going to be a line with a slope 1/4
+So we have got the line, I am just going to pick some points 
+I know (0,0) is one point that is on the graph and I know if I put x equals 4 then y would be 1
+Actually, I am not sure where they intersect. Let's find out where they intersect
+Set their x's equal to each other since they are solved for and I will have y cubed equals 4 y and find the point of intersection. That means you have y(y^2-4)
+And that is y equals 0, (y-2)(y+2)
+So these things intersect when y equals 0, 2, and -2
+So now these are the y values. So let's go back and figure out what the x values will be
+When the y is equal to 0, the x is going to be 0
+So I got the point (0,0)
+When the y is 2, the x will be 8
+Okay so we have got (8,2) and so now I have got 2 up here 
+So (8,2), let's say this point right here is (8,2) 
+And our line goes like this and then we have got our other curve 
+So that is our region you can see it shaded it there in the middle
+Okay so now we are rotating this around,
+They want to know which is bigger going around the x-axis or going around the y-axis. So let us do both of them
+So let's say we are rotating this around the x-axis  
+For rotating this around the x-axis then I am going to take a piece of it here 
+I always go perpendicular to the axis of rotation and then I am going to revolve that and I am going to end up with this washer here 
+So now to find the area of that one washer I need to know what is the outer radius 
+Well the outer radius goes from the axis out to the furthest curve. That outer radius is the curve x equals  y cubed 
+Now, if I am going around the x-axis I do not really care about the xs 
+That radius is a y value, so x equals  y cubed  is equivalent to y equals x^(1/3) 
+So that is why you need to draw these pictures you got to see that radius is a y value. So solve it for y so you can get that y value would be 
+So then the volume here then will be, I am going to put the pi on the outside 
+The outer radius will be the y value for that upper curve which will be x^(1/3) 
+So I have got [x^(1/3)]^2, radius squared, minus 
+Now the inner radius squared, the inner radius go from the axis of rotation up to the closest curve to the x-axis, which will be the line x equals 4 y 
+But I do not really what the x is equal to, x is 4 y 
+I am looking at y values here because that is what the radius will be for that smaller circle that I am cutting out 
+So the y will be (1/4)x or x/4. So, minus, now the inner radius will be (x/4)^2 okay my variable of integration will be x since that is what my equations are in terms of 
+And my limits of integration will be the x values that that entire solid will be between
+The first x value over here where the region starts is x equals 6 and where it ends over here is when the x is 8
+
+
+So I will go from 0 to 8 to get that volume. So that is the solid I would get if I were revolving around the x-axis 
+Okay so just finishing this up real quick I have got pi, 0 to 8, I have got x^(2/3) – (x^2)/16 
+I have got pi times x^(5/3) times 3/5 and then, pi times everything, minus (x^3)/48 and then I want to integrate that from 0 to 8 
+And that is going to be a pretty big number I will fill that in just a minute
+Okay, now the next one. Now we are going to take the same region and we are going to now revolve it around the y-axis 
+So if you took this and revolved it around the y-axis
+I want to take a rectangle or just a representative line segment there and I want to draw it horizontally.
+It always needs to be perpendicular to the axis you are rotating it around 
+So if I took this line segment now and rotated it around the y-axis, that is going to be the hole in the middle and this will be the washer. 
+So I have got the washer here from taking this one piece and rotating it around the y-axis 
+So looking at that one piece I need to figure out what is the radius of the outer circle 
+Well the radius of the outer circle goes from the axis that you are rotating around all the way out to the furthest curve. So that is what generates that side of that biggest circle 
+Well that curve is that x equals 4 y and because that is a horizontal distance I am measuring it will be the x value 
+So we are going to have that volume equal to pi times the radius which is 4 y
+That is the radius. That is the x value for that curve that is furthest away from the y-axis, squared minus, 
+Now I want the x value. I want to find whats the radius of this little circle I am taking out. Well it is from here to here and this curve that I am hitting here is the curve y equals x^(1/3) or x equals  y cubed  
+And we want x values though since we are trying to get this radius and it is an x value since it is a horizontal distance 
+So I am going to have minus that x which is  y cubed  and then square it to get the area of that circle 
+So pi r-squared minus pi r-squared and it is, you know, pretty simple if you just can tell from the picture what those inner and outer radii of that disk will be
+Okay so cleaning this up real quick I have got pi times the integral of 16y^2 minus y^6 
+Because I have the variable y, and so my variable of integration is y, my limits of integration must be y also. So what are the y values that the entire solid will fall between? 
+Well it will be here and wherever that region ends which will be y equals 2
+So 0 to 2 will be my limits of integration  
+So now integrating, we are going to have pi times (16 y cubed )/3 minus (y^7)/7 
+And I want to evaluate it from 0 to 2 
+And when you evaluate that you are going to end up with 512pi/21, which is approximately 76.6 
+And now this other one when we did it the other way, evaluate it that from 0 to 8, came out to be 128pi/15 and that is approximately 26.81 
+So if you want to actually want to look at the two solids that you got by rotating it around different axes then definitely rotating around the y-axis gave you a larger solid
