@@ -1,0 +1,114 @@
+Okay now what we are going to do to approximate the integral is we are going to take the same subintervals that we divided the interval [a,b] into and we are going to form trapezoids and add the areas of all those trapezoids together
+So we simply have the function f that is defined integrable on the interval [a,b] 
+The trapezoid rule says take each of these subintervals. So for example I am going to take this subinterval 
+I am going to calculate the y values at the endpoints. So I am going to have f(x1) will be this y value and f(x2) will be this ys value
+Now connect those in a straight line and now what we have is we have a trapezoid
+And we are going to use that trapezoid which is a closer approximation to the area under the curve on that subinterval than what a rectangle would be by using the midpoint to calculate the height of the rectangle
+So what we are going to do that for each one of these subintervals
+So all you are doing is calculating areas of trapezoids
+If you remember the area of a trapezoid is half the base, the sum of the two bases, so base 1 plus base 2, times the height
+Okay so in this case our height is actually our delta x and our base 1 will be that left height and our base 2 will be the height at that right endpoint
+Okay, so once we do that, and lets say we look at that first subinterval. I am going to take half of f of x sub zero plus f of x sub one
+So those are my two bases. And then times my delta x, plus, now I am going to put my delta x out in front of this whole thing and multiply by everything because this is going to be multiplied by each one of those trapezoids
+The next subinterval I am going to have half of  f of x sub 1 plus f of x sub 2 times my delta x that I have in front
+Plus the next subinterval. Half of f of x sub 2 plus f of x sub 3 and then I am going to go over to the last one and this last subinterval I have my x sub n and x sub n-1. 
+So I am going to have plus 1/2 f of x sub n - 1 plus f of x sub n
+Okay and this whole thing is times the delta x since that will be the width of each one of those trapezoids
+Okay notice here that when I started, if I take that half out of everything, what I am going to end up with is I am going to have half of the first one,  f of x sub 0, but then I am going to have half of x sub 2 here and half of x sub 1 here 
+So these two put together are going to make f of x sub 1 but I am just going to have half of the f of x sub 0 at the front
+And then when I take this half of f of x sub 2 plus this half of f of x sub 2 I am going to have another whole f of x sub 2 and that is going to continue until I get over here
+This half of f of x sub n - 1 is going to be added to a half that precedes that. So I am going to get whole f of x sub n - 1. and then I am going to end up with half of this last term. 
+Okay so this is my formula for the trapezoid rule. You can see half of the very first y value, half of the very last y value, and then I am adding up the y values that all the midpoint, all the subinterval n points in the middle
+So all that times my delta x which is that height for those trapezoids
+So that is our general trapezoid rule. You calculate your delta x in the same way, b - a over n, and your x sub k is each time the same as before. It is the a plus k of the delta xs depending on which sub interval you are looking at. 
+Now there is a formula, we are not going to use is much, to calculate a trapezoid value based on a previous trapezoid and midpoint formulas values for a smaller n. 
+So lets say I wanted to find what T(8) is. T(8) is the trapezoid rules values when n was equal to 8
+Well if I already have the trapezoid rule at 4 plus the midpoint rules approximation at 4 and I average those, that will give me the T(8)
+So this formula will be helpful only if we already have the trapezoid and midpoint for an earlier value of smaller n and we want to get the trapezoid values for the next size n. You have twice as much. 
+So keep this in mind if we ever want to calculate trapezoid values for higher numbers of n. We already calculated them for smaller. So we have done 4. Trapezoid at 4. Midpoint at 4. Then we could easily get the trapezoid value by averaging those values. So that might come in handy.
+
+
+Okay now lets look at a problem. Same problem we did before but now we are going to use the trapezoid rule and I am still going to continue to use n=4
+We are going to have our same endpoints for our intervals, n=4, our delta x is still going to be the b minus the a over n
+Which is going to be the 4 minus the 2 over the 4
+Remember our a is this lower endpoint and our b is the upper endpoint
+Okay so our subintervals, x sub 0, the first endpoint is going to be the a which is 2. X sub 1 is going to be 2 plus the half, so 2 and a half. X sub 2 is going to be 3. X sub 3 is going to be 3 and a half. And x sub 4 was going to be 4
+Okay so those are our endpoints. 2, 2.5, 3, 3.5, and 4
+Okay, what the trapezoid rule says is that the trapezoid rule at 4 is going to be equal to, now I am going to go ahead and put my delta x out in front. 
+It is my delta x times half of x sub 0 plus the sum of the f of x sub k, x sub i for i = 1 to n-1. I could use k just as easily there, plus and then half of my f of x sub n
+Okay, so that is what the midpoint formula, I mean the trapezoid rule says
+Okay, so delta x is 1/2. I am going to have half of f of x sub 0. So that is f(2) plus, now I want to sum up the f of x sub ks. 
+Now I have only got three in the middle so I can write is as a summation or I can just write them out so I am going to have f(2.5) plus f(3) plus f(3.5) and then I am going to do half of the very last endpoint which is f of x sub 4 which is just 4
+Okay so now go back and our function up here is f(x) = x^2. Okay so I am going to have .5[1/2 2^2 + 2.5^2 + 3^2 + 3.5^2 + 1/2 *4^2]
+Okay calculate all of that our and you are going to come up with 18.75
+Okay so now if you wanted to find some of the error here. Lets say I wanted to find the absolute error. 
+We already solved the exact error, the exact value here is the 56/3. So our absolute error will be 56/3 - 18.75. And that absolute error then (.0833) 
+Okay the relative error will be taking that .0833 and dividing by the exact value which comes out to be .00446 or just .446%
+Okay, and now increase the number of n, you know the number of subintervals here, you will get a better approximation. You will get closer to that 56/3
+
+Okay now lets look at a midpoint and trapezoid approximation for this problem. We are given the function f(x) = xe^(-x). 
+Now this is a problem that we could do by integration by parts but we are given the exact answer here so we do not have to do that
+The exact answer we are told is 1-2e^(-1)
+Now if we had the exact answer we would not be doing an approximation, but we are using the exact answer just to see how close our approximation is going to be to our exact value. 
+Okay so my subinterval here is from 0 to 1, the limits of integration
+Okay, the first thing I want to do is I want to calculate my delta x and my x sub ks
+The delta x will be my b-a over n and I am going to do this problem with 16 subintervals. Okay so this is going to be 1 minus 0 over 16, so 1/16
+Now my x sub ks are going to be the a plus k times delta x. Okay, my delta x is 1/16 so that is just going to be the a which is 0 + k * 1/16. So that is just going to be k/16. 
+Now that is true for k=0,1,2,...,16. Okay, so those are the endpoints of my subintervals.
+Okay so now lets look at the formulas for the midpoint formula. The midpoint rule. 
+The midpoint rule says we are going to calculate the sum, now this is going to be m(16), m(n) in general, is going to be the sum of the functions values of the midpoint. 
+So we are going to have x sub k, lets say x sub k - 1 plus x sub k all over 2
+So that is the midpoint for that kth subinterval. Now this will be starting at k = 1 and going up to k =n. So that is f of the midpoint times our delta x. Okay so that is our midpoint formula
+Okay so now lets see what that looks like for that particular problem. Okay, I am going to have the midpoint at 16, is going to be the summation of the functions values x sub k-1. If x sub k,s I have over here that x sub k is equal to k/16, then x sub k-1 will be k-1 over 16
+So x sub k - 1 right here is just going to be k-1 over 16 plus the x sub k is k/16 and then divide that by 2. All that is inside the functions argument there. And then times the delta x which is just 1/16.
+Okay I am going to simplify this just a little bit and my k here again is going from 1 to n. okay this is just going to be the functions value at, if I get a common, I already have a common denominator in the numerator here, so if I add those two I am going to have 2k-1 over 16 and then I have that divided by 2, this is going to give me 2k-1 over 32
+Okay, now that 1/16 I can bring out of the summation, so what this really comes down to is 1/16 times the sum of the function evaluated for 2k-1 over 32 and that is going from k=1 to n
+Okay, now I am going to show you how to do this in your calculator in just a minute. Okay now lets set up our trapezoid rule. 
+Okay the trapezoid rule says that T(n) will be half of f of x sub 0 plus the sum for k=1 to n-1 of f of x sub k plus a half of f of x sub n, all that times our delta x.
+Okay, so using this formula I am going to have T(16) is equal to  1/2 f(0) plus the summation of f(k/16) and that is from k = 1 to n-1 plus one half of f(1) which is my x sub n and then times the delta x which is 1/16
+And I would tend to go ahead and bring that, well the 1/16 is at the very end so I will not worry too much about it
+Okay to do this one what I am going to do is I am going to figure out the half of the f(0), half of f(1) and then I am going to add all of these up using my calculator
+This is just the sum of a sequence because the values that I am plugging into that function form a nice sequence. So I am just calculating the functions values for that sequence.
+So your calculator. Okay now I have my calculator. One thing I do notice is I do need to change here is I needed to fill in my n up here it should be up to 16 and likewise down in this bottom one I am going to actually add it up to not just k-1 it should go up to 15 now
+So I am going to be doing the summation from k=1 to 15 and then f of the functions value. 
+Okay so now using the calculator, we are trying to sum up this sequence. So we are trying to figure out what this would add up to and what this one would add up to. That is what we are going to use our calculator for
+Okay, the general steps here is you are going to use the sum of a sequence and then you give its parameters. You put the function f(x). 
+You actually write out what that function is which is xe^-x. Then you are going to put the variable that you are using which is x. Then you are going to put the first number that you are going to be plugging in to that function.
+ So in this case right here when k is equal to 1 I am going to be plugging in 2 times 1 minus 1 over 32. So I am going to be plugging in 1/32. 
+So it is that first value you are entering in to that function. The last value you are going to enter, we are going up to 16 so when you put 16 for the k we will have 32-1 so 31/32 and then you want your increment.
+Now the increment defaults is 1 so if you did not put anything it would assume it was one apart. But if you look here, when k is equal to one we are going to be plugging in 1/32 into the function
+When k=2 we are going to be plugging in 3/32. So that increment is actually going to be 2/32 which is just 1/16 which is just going to be your delta x
+Okay, so this is the steps and we need two set of parenthesis to close off those functions sum and sequence
+Now to get to those functions, sum is going to be under the list button in math. And it is option 5. 
+Sequence is list, ops (operations), and it is option 5
+And then we will just enter everything as we go
+Okay so now using our calculator here I want the sum so I am going to do 2nd stat which is my list 
+I want to make sure I put everything right. So clear this off. Get out of it. I do not think my keys are... a little bit out of sync here
+Okay, list, so 2nd list, go over to math, and I want option 5 for sum
+So I have got the sum. Now I want sequence. So again go 2nd stat, which is the list, go over to operations, and you will see option 5 there is sequence so I am choosing 5. 
+And so now I am entering my function; x, the e^x which is the shift of the ln key, and now I need negative so be sure you use the minus sign down at the bottom, -x, close your parenthesis, comma is underneath the sin button, and now the variables is the next entry, comma, the first thing we are entering is 1/32. So one divided by 32, comma, 31/32 is the last thing that I am entering. 
+The increment between each of those values I am plugging in for the function is 1/16. And then I need to close my parenthesis twice to close out the two different sub routines
+Okay so now when I do that I am getting the part here that is in red but I am going to have to also multiply by the 1/16 out in front. So let me total this out and then I am going to divide by 16
+And I get .244. So the answer to this right here is .2644. So that is your approximation using the midpoint formula with n=16
+Okay, now lets do the same thing down here. It is a little more work because we cannot just use one summation here. I will have the one summation but I will also have to do the two f(0) and f(1) separately
+So lets do the summation first. So I am going to clear this out. I want the sum. So 2nd stat which is the list. And go over to math which is option 5
+The sequence, 2nd stat which is list and go to operations, option 5, and now my function is the xe^(-x), comma, wait I did not close my parenthesis. 
+So parenthesis, comma, the variable name, comma, now what am I plugging in down here
+When I out in k=1 here I am going to be plugging in 1/16 right here. So 1/16 will be my first. The last thing I am going to plug in is the 15 because k goes up to 15 in the summation here
+So plugging in 15 and my last thing will be 15/16
+And then my increment, well if you plug in 1 you get 1/16. Plug in 2 you get 2/16, so the increment is 1/16
+So these are the three values we are going use in that function. So we got our x, we have our 1/16, one divided by 16, comma, 15/16, comma, 1/16, parenthesis, and now I want to close out the parentheses for both of the, that was the close for the sequence, now the sum, another set of parenthesis, and now I need to add, that is just the sum of the sequence
+Now I need to add the 1/16, I mean the 1/2 of f(0)
+Well f(0) is going to be 0 e^-0 so that is just going to be 0 anyway
+The f(1) is going to be 1 e^(-1). Okay so that is what I am going to put right here and this one over here was just 0
+So I am going to have 1/2 e^(-1). So I need to add that to this, so plus 1/2, so .5 times e^(-1)
+Okay now that should total up everything and now I have my delta x multiplied by all that on the outside. So now times 1/16 or divided by 16
+And so we get .2639 which is an approximation to our original interval up here
+So now lets look at what kind of errors we have. We got 1-2e^(-1) is our exact value. 
+Okay so we will have the1 - 2e^(-1) minus the midpoint one would be .2264 
+The trapezoid, 1-2e^(-1) - .2639, okay and those come out to be, this one is .000163 and the second one here will be .000325
+Okay, so the error looks like it is a little bit larger for the trapezoid and it is going to depend on the curve as to which one, I mean the type of curve whether it is increasing or decreasing as to which one might be the better approximation
+
+
+
+

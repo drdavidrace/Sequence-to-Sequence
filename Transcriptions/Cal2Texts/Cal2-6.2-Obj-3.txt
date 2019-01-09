@@ -1,5 +1,5 @@
 ﻿Okay, now we’re going to integrate with respect to y.  Now when we looked at the area of the region between two functions y = f(x) and y = g(x).  So they were functions of x.
-So we had something like that and something like that. And we just looked at a vertical rectangle to get what that one rectangle’s area was going to be here and added up all the rectangles.
+And we just looked at a vertical rectangle to get what that one rectangle’s area was going to be here and added up all the rectangles.
 There’s nothing magical about having functions of y and using vertical rectangles.  It was just easy because the functions actually gave us height.  Y is that distance above the x-axis.
 So it’s easy to get a height that way.
 Now sometimes though you won’t be given equations that are functions of x like this.  You might be given something that is a function of y so that the equation will be in the form x=f(y).
