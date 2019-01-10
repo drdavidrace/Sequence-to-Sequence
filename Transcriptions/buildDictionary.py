@@ -75,7 +75,7 @@ if __name__ == '__main__':
                     fn.close()
     text_list =[(k,text_hist[k]) for k in sorted(text_hist, key=text_hist.get,reverse=True)]
     #Save the text_hist in a pickle
-    hist_file_name = os.path.join(cur_dir,"video.hist.pickle")
+    hist_file_name = os.path.join(cur_dir,"video.hist.pkl")
     print(len(text_hist))
     if os.path.isfile(hist_file_name):
         os.remove(hist_file_name)
