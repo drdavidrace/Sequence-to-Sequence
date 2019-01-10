@@ -119,12 +119,11 @@ if __name__ == '__main__':
     #Get the directories
     cur_dir = '.'
     sub_dirs = [os.path.join(cur_dir,d) for d in os.listdir(cur_dir) if os.path.isdir(os.path.join(cur_dir,d))]
-    print(sub_dirs)
     #Clean the directories
     #replace the spaces in the names with -
     for sd in sub_dirs:
-        p_files = os.listdir(sd)
         if os.path.basename(sd).upper().startswith("CAL"):
+            p_files = os.listdir(sd)
             for f in p_files:
                 f_new = f.replace(" ","-")
                 os.rename(os.path.join(sd,f),os.path.join(sd,f_new))
@@ -133,8 +132,8 @@ if __name__ == '__main__':
                     os.remove(new_file)
     #filter the text to replace the = with equals
     if process_subs:
-        if os.path.basename(sd).upper().startswith("CAL"):
-            for sd in sub_dirs:
+        for sd in sub_dirs:
+            if os.path.basename(sd).upper().startswith("CAL"):
                 p_files = os.listdir(sd)
                 for f in p_files:
                     if not re.match("^\.",f):
@@ -175,5 +174,5 @@ if __name__ == '__main__':
                                         fm.write("{:s} .\n".format(out_str))
                         fn.close()
                         fm.close()
-            curr_phase_count += 1
+                curr_phase_count += 1
     print(curr_phase_count)
