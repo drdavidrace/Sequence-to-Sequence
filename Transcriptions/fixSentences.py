@@ -124,54 +124,56 @@ if __name__ == '__main__':
     #replace the spaces in the names with -
     for sd in sub_dirs:
         p_files = os.listdir(sd)
-        for f in p_files:
-            f_new = f.replace(" ","-")
-            os.rename(os.path.join(sd,f),os.path.join(sd,f_new))
-            new_file = os.path.join(sd,f_new)
-            if f_new.startswith("PH"):
-                os.remove(new_file)
+        if os.path.basename(sd).upper().startswith("CAL"):
+            for f in p_files:
+                f_new = f.replace(" ","-")
+                os.rename(os.path.join(sd,f),os.path.join(sd,f_new))
+                new_file = os.path.join(sd,f_new)
+                if f_new.startswith("PH"):
+                    os.remove(new_file)
     #filter the text to replace the = with equals
     if process_subs:
-        for sd in sub_dirs:
-            p_files = os.listdir(sd)
-            for f in p_files:
-                if not re.match("^\.",f):
-                    f_new = "PH"+str(curr_phase_count) + "-" + f
-                    f0 = os.path.join(sd,f)
-                    f1 = os.path.join(sd,f_new)
-                    fn = open(f0,'r',encoding="ISO-8859-1")
-                    fm = open(f1,'w')
-                    for cur_line in fn:
-                        if not re.match(r'^slide',cur_line,re.I):
-                            new_line = basic_subs(cur_line)
-                            new_line = first_number_replace_words(new_line)
-                            new_line = fraction_replace_words(new_line)
-                            #new_line = ordered_pair_replace_words(new_line)
-                            split_lines = re.split(r"[\.\!\?]\s+",new_line)
-                            for s in split_lines:
-                                s1 = s.replace(r"[\?\.\!]$","").strip()
-                                s1 = re.sub(r'\s\s+',' ',s1)
-                                #The following makes the substitution f(x) to f of x, kinda cute
-                                s1 = re.sub(r"(\S+)\((.+?)\)",r"\1 of \2",s1)
-                                s1 = re.sub(r"(\d+)(pi)", r"\1pi ",s1)
-                                s1 = re.sub(r"(pi)[\/]", r" pi over ",s1)
-                                s1 = re.sub(r"(pi)[\+]", r" pi plus ",s1)
-                                s1 = re.sub(r"(pi)[\-]", r" pi minus ",s1)
-                                s1 = re.sub(r"(pi)[\*]", r" pi times ",s1)
-                                s1 = re.sub(r"(pi)[\^]", r" pi to the power of  ",s1)
-                                s1 = s1.rstrip().rstrip(".").rstrip("?").rstrip("!").rstrip()
-                                s1 = s1.strip()
-                                s1 = s1.replace(")/", " over ")
-                                s1 = first_number_replace_words(s1)
-                                s1 = fraction_replace_words(s1)
-                                words = s1.split()
-                                out_str = ""
-                                for w in words:
-                                    word = re.sub("([\.\?\!\,\[\(\)\]])*([\-\+0-9a-zA-Z]+)([\.\?\!\,\[\]\)\(])*",r"\2",w)
-                                    out_str = out_str + " " + word
-                                if len(out_str) > 0:
-                                    fm.write("{:s} .\n".format(out_str))
-                    fn.close()
-                    fm.close()
-        curr_phase_count += 1
+        if os.path.basename(sd).upper().startswith("CAL"):
+            for sd in sub_dirs:
+                p_files = os.listdir(sd)
+                for f in p_files:
+                    if not re.match("^\.",f):
+                        f_new = "PH"+str(curr_phase_count) + "-" + f
+                        f0 = os.path.join(sd,f)
+                        f1 = os.path.join(sd,f_new)
+                        fn = open(f0,'r',encoding="ISO-8859-1")
+                        fm = open(f1,'w')
+                        for cur_line in fn:
+                            if not re.match(r'^slide',cur_line,re.I):
+                                new_line = basic_subs(cur_line)
+                                new_line = first_number_replace_words(new_line)
+                                new_line = fraction_replace_words(new_line)
+                                #new_line = ordered_pair_replace_words(new_line)
+                                split_lines = re.split(r"[\.\!\?]\s+",new_line)
+                                for s in split_lines:
+                                    s1 = s.replace(r"[\?\.\!]$","").strip()
+                                    s1 = re.sub(r'\s\s+',' ',s1)
+                                    #The following makes the substitution f(x) to f of x, kinda cute
+                                    s1 = re.sub(r"(\S+)\((.+?)\)",r"\1 of \2",s1)
+                                    s1 = re.sub(r"(\d+)(pi)", r"\1pi ",s1)
+                                    s1 = re.sub(r"(pi)[\/]", r" pi over ",s1)
+                                    s1 = re.sub(r"(pi)[\+]", r" pi plus ",s1)
+                                    s1 = re.sub(r"(pi)[\-]", r" pi minus ",s1)
+                                    s1 = re.sub(r"(pi)[\*]", r" pi times ",s1)
+                                    s1 = re.sub(r"(pi)[\^]", r" pi to the power of  ",s1)
+                                    s1 = s1.rstrip().rstrip(".").rstrip("?").rstrip("!").rstrip()
+                                    s1 = s1.strip()
+                                    s1 = s1.replace(")/", " over ")
+                                    s1 = first_number_replace_words(s1)
+                                    s1 = fraction_replace_words(s1)
+                                    words = s1.split()
+                                    out_str = ""
+                                    for w in words:
+                                        word = re.sub("([\.\?\!\,\[\(\)\]])*([\-\+0-9a-zA-Z]+)([\.\?\!\,\[\]\)\(])*",r"\2",w)
+                                        out_str = out_str + " " + word
+                                    if len(out_str) > 0:
+                                        fm.write("{:s} .\n".format(out_str))
+                        fn.close()
+                        fm.close()
+            curr_phase_count += 1
     print(curr_phase_count)
