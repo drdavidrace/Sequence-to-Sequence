@@ -49,7 +49,7 @@ def create_base_words():
     if os.path.isfile(glove_idx_pickle):
         os.remove(glove_idx_pickle)
     vectors = bcolz.carray(np.zeros(1), rootdir=glove_vectors, mode='w')
-
+    print(glove_file)
     with open(glove_file, 'rb') as fn:
         for l in fn:
             line = l.decode().split()
