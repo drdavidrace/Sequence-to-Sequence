@@ -36,7 +36,7 @@ glove_file = os.path.join(glove_dir,glove_file_name)
 glove_vectors = os.path.join(glove_dir,glove_vector_dat)
 glove_word_pickle = os.path.join(glove_dir,glove_word_pickle_name)
 glove_idx_pickle = os.path.join(glove_dir,glove_idx_pickle_name)
-video_data_pickle = os.path.join(cur_dir,"video.hist.pickle")
+video_data_pickle = os.path.join(cur_dir,"video.hist.pkl")
 #
 def create_base_words():
     words = []
