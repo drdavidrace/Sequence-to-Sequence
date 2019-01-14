@@ -1,1 +1,1 @@
-{"vector_len": 50, "size": 42}
+{"vec_len": 300, "size": 42, "glove_dir_name": "glove-base", "work_dir": "/work-temp", "glove_sizes": [6, 42, 840], "vector_lengths": [50, 300]}

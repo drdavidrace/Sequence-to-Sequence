@@ -15,6 +15,7 @@ import shutil
 import pickle
 import tables as tbl
 import numpy as np
+from embed_defaults.build_glove_names import *
 
 parser = argparse.ArgumentParser(description="Parse args for processing transcriptions")
 parser.add_argument("-c",dest="create_word_vector",action='store_true', \
@@ -25,42 +26,41 @@ parser.add_argument("-b",dest="create_base_table",action="store_true", \
 args = parser.parse_args()
 create_word_vector = args.create_word_vector
 create_table = args.create_base_table
+work_dir = get_work_dir_name()
+work_glove_dir = get_work_glove_dir()
 #
 #  Defaults
 #
-#  Working directories
-glove_dir_name = "glove-base"
-work_dir = "/work-temp"
-work_glove_dir = os.path.join(work_dir,glove_dir_name)
 if not os.path.isdir(work_dir):
     print("The working directory path {:s} does not exist.  Exiting".format(work_dir))
     sys.exit()
 if not os.path.isdir(work_glove_dir):
     os.makedirs(work_glove_dir,mode=0o777,exist_ok=True)
 #  Glove Information
-vec_len = 50
+vec_len = get_vec_len()
 max_word_length = 0
 num_data_points = 400000 
-glove_vector_name = "6B." + str(vec_len) + "d"
-glove_file_name = "glove." + glove_vector_name + ".txt"
-glove_word_pickle_name = "glove." + glove_vector_name + "_word.pkl"
-glove_idx_pickle_name = "glove." + glove_vector_name + "_idx.pkl"
-glove_vector_dat = "glove." + glove_vector_name + ".hd5"
+glove_file_name = get_glove_file_name()
+glove_vector_dat = get_glove_vector_dta()
 #  Existing Files
 cur_dir = "."
-glove_dir = os.path.join(cur_dir,glove_dir_name)
-glove_file = os.path.join(glove_dir,glove_file_name)
-working_glove_file = os.path.join(work_glove_dir,glove_file_name)
+glove_file = get_glove_file_name()
+working_glove_file = get_working_glove_file_name()
 if not os.path.isfile(working_glove_file):
     if not os.path.isfile(glove_file):
         print("The glove file {:s} does not exist.  Exiting".format(glove_file))
         sys.exit()
     else:
         shutil.copy2(glove_file,working_glove_file)
+else:
+    os.remove(working_glove_file)
+    if not os.path.isfile(glove_file):
+        print("The glove file {:s} does not exist.  Exiting".format(glove_file))
+        sys.exit()
+    else:
+        shutil.copy2(glove_file,working_glove_file)
 #
-working_glove_vectors = os.path.join(work_glove_dir,glove_vector_dat)
-working_glove_word_pickle = os.path.join(work_glove_dir,glove_word_pickle_name)
-working_glove_idx_pickle = os.path.join(work_glove_dir,glove_idx_pickle_name)
+working_glove_vectors = get_glove_vector_dta()
 video_data_pickle = os.path.join(cur_dir,"video.hist.pkl")
 def max_len_word():
     max_word_length = 0
@@ -82,73 +82,77 @@ def create_base_table():
     word_table = glove.create_table(word_group,'word_vectors', \
     description=data_def,title="Word Vectors",expectedrows=num_data_points)
     word_row = word_table.row
-    print(type(word_row['word']))
+    print("Starting the word/vector storage")
     #Add values to the table
+    word_count = 0
     with open(glove_file, 'rb') as fn:
         for l in fn:
             line = l.decode().split()
             w = line[0].lower().strip()
-            v = np.array(line[1:]).astype(np.float)   
-            word_row['word'] = bytes(w.encode("ascii","ignore"))
-            word_row['vector'] = v
-            word_row.append()
+            v = np.array(line[1:]).astype(np.float) 
+            if v.shape[0] == vec_len:
+                word_count += 1  
+                word_row['word'] = bytes(w.encode("ascii","ignore"))
+                word_row['vector'] = v
+                word_row.append()
+                if word_count%10000 == 0:
+                    print("\tProcessed {:d} words.".format(word_count))
     glove.flush()
-    print(word_table)
-    print(word_table[0])
-    check = "word ==" + "'theta'"
-    first_result = [row['vector'] for row in word_table.where(check) ]
-    print(first_result)
+    # print(word_table)
+    # print(word_table[0])
+    # check = "word ==" + "'theta'"
+    # first_result = [row['vector'] for row in word_table.where(check) ]
+    # print(first_result)
     glove.close()
 
     
-def create_base_words():
-    """Create the basic glove information in the working directory.
-    This isn't very smart.  Ideally it would check the dates and only do the work
-    if the dates are out of alignment, but this is quick and dirty.
-    """
-    words = []
-    idx = 0
-    word2idx = {}
-    if os.path.isfile(working_glove_vectors):
-        os.remove(working_glove_vectors)
-    if os.path.isfile(working_glove_word_pickle):
-        os.remove(working_glove_word_pickle)
-    if os.path.isfile(working_glove_idx_pickle):
-        os.remove(working_glove_idx_pickle)
-    vectors = bcolz.carray(np.zeros(1), rootdir=working_glove_vectors, mode='w')
-    with open(working_glove_file, 'rb') as fn:
-        for l in fn:
-            line = l.decode().split()
-            try:
-                vect = np.array(line[1:]).astype(np.float)
-                if vect.shape[0] == 300:
-                    word = line[0]
-                    words.append(word)
-                    word2idx[word] = idx
-                    idx += 1
-                    vectors.append(vect)
-            except:
-                print(line)
-                print(idx)
-                print(len(line))
+# def create_base_words():
+#     """Create the basic glove information in the working directory.
+#     This isn't very smart.  Ideally it would check the dates and only do the work
+#     if the dates are out of alignment, but this is quick and dirty.
+#     """
+#     words = []
+#     idx = 0
+#     word2idx = {}
+#     if os.path.isfile(working_glove_vectors):
+#         os.remove(working_glove_vectors)
+#     if os.path.isfile(working_glove_word_pickle):
+#         os.remove(working_glove_word_pickle)
+#     if os.path.isfile(working_glove_idx_pickle):
+#         os.remove(working_glove_idx_pickle)
+#     vectors = bcolz.carray(np.zeros(1), rootdir=working_glove_vectors, mode='w')
+#     with open(working_glove_file, 'rb') as fn:
+#         for l in fn:
+#             line = l.decode().split()
+#             try:
+#                 vect = np.array(line[1:]).astype(np.float)
+#                 if vect.shape[0] == 300:
+#                     word = line[0]
+#                     words.append(word)
+#                     word2idx[word] = idx
+#                     idx += 1
+#                     vectors.append(vect)
+#             except:
+#                 print(line)
+#                 print(idx)
+#                 print(len(line))
             
 
-    num_entries = int(vectors.shape[0] / vec_len)
-    vectors = bcolz.carray(vectors[1:].reshape((num_entries, vec_len)), rootdir=working_glove_vectors, mode='w')
-    vectors.flush()
-    pickle.dump(words, open(working_glove_word_pickle, 'wb'))
-    pickle.dump(word2idx, open(working_glove_idx_pickle, 'wb'))
+#     num_entries = int(vectors.shape[0] / vec_len)
+#     vectors = bcolz.carray(vectors[1:].reshape((num_entries, vec_len)), rootdir=working_glove_vectors, mode='w')
+#     vectors.flush()
+#     pickle.dump(words, open(working_glove_word_pickle, 'wb'))
+#     pickle.dump(word2idx, open(working_glove_idx_pickle, 'wb'))
 
-def get_word_vector():
-    vectors = bcolz.open(working_glove_vectors)[:]
-    words = pickle.load(open(working_glove_word_pickle, 'rb'))
-    word2idx = pickle.load(open(working_glove_idx_pickle, 'rb'))
-    glove = {w: vectors[word2idx[w]] for w in words}
-    return glove
+# def get_word_vector():
+#     vectors = bcolz.open(working_glove_vectors)[:]
+#     words = pickle.load(open(working_glove_word_pickle, 'rb'))
+#     word2idx = pickle.load(open(working_glove_idx_pickle, 'rb'))
+#     glove = {w: vectors[word2idx[w]] for w in words}
+#     return glove
 
 if __name__ == "__main__":
-    if create_table:
-        create_base_table()
+    create_base_table()
 
     # if create_word_vector:
     #     create_base_words()
