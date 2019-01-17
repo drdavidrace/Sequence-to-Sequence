@@ -16,7 +16,7 @@ import pickle
 import tables as tbl
 import numpy as np
 from embed_defaults.build_glove_names import *
-from math import exp
+from math import exp, log
 
 parser = argparse.ArgumentParser(description="Parse args for processing transcriptions")
 parser.add_argument("-c",dest="create_word_vector",action='store_true', \
