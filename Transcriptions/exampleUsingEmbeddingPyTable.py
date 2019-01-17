@@ -15,7 +15,7 @@ import shutil
 import pickle
 import tables as tbl
 import numpy as np
-from embed_defaults.build_glove_names import *
+from embed_defaults.build_glove_names import seq_seq_defaults
 from math import exp, log
 
 parser = argparse.ArgumentParser(description="Parse args for processing transcriptions")
@@ -24,11 +24,12 @@ parser.add_argument("-c",dest="create_word_vector",action='store_true', \
 parser.add_argument("-b",dest="create_base_table",action="store_true", \
   help='Create the base pytable for the embedding words.')
 
+defaults = seq_seq_defaults()
 args = parser.parse_args()
 create_word_vector = args.create_word_vector
 create_table = args.create_base_table
-work_dir = get_work_dir_name()
-work_glove_dir = get_work_glove_dir()
+work_dir = defaults.get_work_dir_name()
+work_glove_dir = defaults.get_work_glove_dir()
 #
 #  Defaults
 #
@@ -38,17 +39,17 @@ if not os.path.isdir(work_dir):
 if not os.path.isdir(work_glove_dir):
     os.makedirs(work_glove_dir,mode=0o777,exist_ok=True)
 #  Glove Information
-vec_len = get_vec_len()
+vec_len = defaults.get_vec_len()
 max_word_length = 0
 num_data_points = 400000 
-glove_file_name = get_glove_file_name()
-glove_vector_dat = get_glove_vector_dta()
+glove_file_name = defaults.get_glove_file_name()
+glove_vector_dat = defaults.get_glove_vector_dta()
 #  Existing Files
 cur_dir = "."
-glove_file = get_glove_file_name()
-working_glove_file = get_working_glove_file_name()
+glove_file = defaults.get_glove_file_name()
+working_glove_file = defaults.get_working_glove_file_name()
 #
-working_glove_vectors = get_glove_vector_dta()
+working_glove_vectors = defaults.get_glove_vector_dta()
 video_data_pickle = os.path.join(cur_dir,"video.hist.pkl")
 # def max_len_word():
 #     max_word_length = 0

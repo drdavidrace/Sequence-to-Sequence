@@ -20,6 +20,7 @@ defaults["glove_dir_name"] = "glove-base"
 defaults["work_dir"] = "/work-temp"
 defaults["glove_sizes"]= [6, 42, 840]
 defaults["vector_lengths"] = [50,300]
+defaults["text_dirs"] = ["Cal2Texts"]
 # process the defaults
 json_defaults = json.dumps(defaults)
 

@@ -15,6 +15,7 @@ import shutil
 import pickle
 import bcolz
 import numpy as np
+from embed_defaults.build_glove_names import seq_seq_defaults
 
 parser = argparse.ArgumentParser(description="Parse args for processing transcriptions")
 parser.add_argument("-c",dest="create_word_vector",action='store_true')
@@ -25,23 +26,22 @@ create_word_vector = args.create_word_vector
 #  Defaults
 #
 #  Working directories
-glove_dir_name = "glove-base"
-work_dir = "/work-temp"
-work_glove_dir = os.path.join(work_dir,glove_dir_name)
+defaults = seq_seq_defaults()
+glove_dir_name = defaults.get_glove_dir_name()
+work_glove_dir = defaults.get_work_glove_dir()
+work_dir = defaults.get_work_dir_name()
 if not os.path.isdir(work_dir):
     print("The working directory path {:s} does not exist.  Exiting".format(work_dir))
     sys.exit()
 if not os.path.isdir(work_glove_dir):
     os.makedirs(work_glove_dir,mode=0o777,exist_ok=True)
 #  Glove Information
-vec_len = 50
-glove_vector_name = "6B." + str(vec_len) + "d"
-glove_file_name = "glove." + glove_vector_name + ".txt"
+vec_len = defaults.get_vec_len()
+glove_vector_name = defaults.get_glove_vector_name()
 glove_word_pickle_name = "glove." + glove_vector_name + "_word.pkl"
 glove_idx_pickle_name = "glove." + glove_vector_name + "_idx.pkl"
 glove_vector_dat = "glove." + glove_vector_name + ".dat"
 #  Existing Files
-cur_dir = "."
 glove_dir = os.path.join(cur_dir,glove_dir_name)
 glove_file = os.path.join(glove_dir,glove_file_name)
 working_glove_file = os.path.join(work_glove_dir,glove_file_name)

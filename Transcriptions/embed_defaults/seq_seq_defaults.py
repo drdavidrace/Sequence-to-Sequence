@@ -115,9 +115,6 @@ class seq_seq_defaults():
             raise ValueError('glove vector length must be one of {}'.format(self.get_vector_lengths()))
         return str(glove_size) + "B." + str(vec_len) + "d"
     #
-    def get_glove_vector_name(self):
-        return self.__get_glove_vector_name__()
-    #
     def __get_glove_file_name__(self):
         return "glove." + self.__get_glove_vector_name__() + ".txt"
     #
