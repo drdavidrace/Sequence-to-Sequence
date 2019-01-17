@@ -62,11 +62,12 @@ class seq_seq_defaults():
         Side Effects:  Updates self.default_json so that thre are keys in all lower case
         """
         if os.path.isfile(self.json_default_file):
-            with open(self.default_json,'r') as fn:
+            with open(self.json_default_file,'r') as fn:
                 self.default_json = json.load(fn)
         else:
             self.default_json = None
-        for key, value in self.default_json:
+        print(self.default_json)
+        for key, value in self.default_json.items():
             t_key = key.lower().strip()
             if not key == t_key:
                 self.default_json[t_key] = value
