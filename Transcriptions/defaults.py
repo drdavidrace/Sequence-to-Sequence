@@ -8,7 +8,7 @@ Nothing fancy here, but may add additional capabilities in the future.
 import os, sys
 import json
 from pprint import pprint
-from embed_defaults.build_glove_names import seq_seq_defaults
+from embed_defaults.seq_deq_defaults import seq_seq_defaults
 
 defaults = seq_seq_defaults()
 json_default_file = defaults.get_json_default_file()
