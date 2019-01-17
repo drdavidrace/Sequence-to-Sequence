@@ -13,8 +13,8 @@ from embed_defaults.build_glove_names import get_defaults_file_name
 json_default_file = get_defaults_file_name()
 #  Define basic defaults
 defaults = {}
-defaults['vec_len'] = 300
-defaults['size'] = 42
+defaults['vec_len'] = 50
+defaults['size'] = 6
 defaults["glove_dir_name"] = "glove-base"
 defaults["work_dir"] = "/work-temp"
 defaults["glove_sizes"]= [6, 42, 840]
