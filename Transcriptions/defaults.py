@@ -8,7 +8,7 @@ Nothing fancy here, but may add additional capabilities in the future.
 import os, sys
 import json
 from pprint import pprint
-from embed_defaults.seq_deq_defaults import seq_seq_defaults
+from embed_defaults.seq_seq_defaults import seq_seq_defaults
 
 defaults = seq_seq_defaults()
 json_default_file = defaults.get_json_default_file()
@@ -20,7 +20,7 @@ defaults["glove_dir_name"] = "glove-base"
 defaults["work_dir"] = "/work-temp"
 defaults["glove_sizes"]= [6, 42, 840]
 defaults["vector_lengths"] = [50,300]
-defaults["text_dirs"] = ["Cal2Texts"]
+defaults["transcript_dirs"] = ["Cal2Texts"]
 # process the defaults
 json_defaults = json.dumps(defaults)
 

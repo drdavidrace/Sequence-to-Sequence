@@ -118,6 +118,12 @@ class seq_seq_defaults():
     def __get_glove_file_name__(self):
         return "glove." + self.__get_glove_vector_name__() + ".txt"
     #
+    def __get_transcript_dirs__(self):
+        return self.__get_default_value__("transcript_dirs")
+
+    def get_transcript_dirs(self):
+        return [os.path.join(self.default_dir,d) for d in self.__get_transcript_dirs__()]
+    #
     def get_glove_file_name(self):
         return os.path.join(self.get_glove_dir_name(),self.__get_glove_file_name__())
     #
