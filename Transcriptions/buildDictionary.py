@@ -14,7 +14,11 @@ import argparse
 import re
 import pickle
 from embed_defaults.seq_seq_defaults import seq_seq_defaults
-from nltk.tokenize import sent_tokenize
+from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tokenize.treebank import TreebankWordDetokenizer
+
+from num2words import num2words
+from math import fabs
 
 parser = argparse.ArgumentParser(description="Parse args for processing transcriptions")
 parser.add_argument("-c",dest="clean_trans",action='store_true', \
@@ -29,15 +33,60 @@ simplify_math = True
 #
 defaults = seq_seq_defaults()
 transcript_directories = defaults.get_transcript_dirs()
+def choose_int_words(inToken=None):
+    t_float = float(inToken)
+    t_int = int(t_float)
+    if fabs(float(t_int) - t_float) < 1e-12:
+        return num2words(t_int)
+    else:
+        return num2words(inToken)
+
+def try_number_replace_token(inToken=None):
+    out_string = None
+    try:
+        t_number = num2words(inToken)
+        out_string = choose_int_words(inToken)
+    except:
+        out_string = inToken
+    return out_string
 #
 def basic_math_changes(inSentence=None):
     new_line = inSentence.lower().encode("ascii",errors="ignore").decode()
     new_line = new_line.replace("=", " equals ")
     new_line = new_line.replace("^", " to the power of ")
+    new_line = new_line.replace("+", " plus ")
+    new_line = new_line.replace("-", " minus ")
+    new_line = new_line.replace("*", " times ")
+    new_line = re.sub(r"(\S+)\((.+?)\)",r"\1 of \2",new_line) #handle f(something), ...
     #Other basic math changes here
+    new_line = new_line.replace("that's"," that is ")
+    new_line = new_line.replace("there's"," there is ")
+    new_line = new_line.replace("let's"," let us ")
+    new_line = new_line.replace("here's"," here is ")
+    new_line = new_line.replace("it's"," it is ")
+    new_line = new_line.replace("y'all"," you all ")
+    new_line = new_line.replace("can'"," cannot ")
+    new_line = new_line.replace("i'd"," i would ")
+    new_line = new_line.replace(" im "," i am ")
+    new_line = re.sub(r"(\d+)(pi)", r"\1pi ",new_line)
+    new_line = re.sub(r"(pi)[\/]", r" pi over ",new_line)
+    new_line = re.sub(r"(pi)[\+]", r" pi plus ",new_line)
+    new_line = re.sub(r"(pi)[\-]", r" pi minus ",new_line)
+    new_line = re.sub(r"(pi)[\*]", r" pi times ",new_line)
+    new_line = re.sub(r"(pi)[\^]", r" pi to the power of  ",new_line)
+
+    sent_tokens = word_tokenize(new_line)
+    sent_tokens = list(map(lambda x: x if not x == "'ll"  else " will ", sent_tokens))
+    sent_tokens = list(map(lambda x: x if not x == "'m"  else " am ", sent_tokens))
+    sent_tokens = list(map(lambda x: x if not x == "n't"  else " not ", sent_tokens))
+    sent_tokens = list(map(lambda x: x if not x == "'re"  else " are ", sent_tokens))
+    sent_tokens = list(map(lambda x: x if not x == "'ve"  else " have ", sent_tokens))
+    sent_tokens = list(map(try_number_replace_token,sent_tokens))
+    new_line = TreebankWordDetokenizer().detokenize(sent_tokens)
     new_line = re.sub('  +',' ',new_line) #replace multiple spaces with a single space
     new_line = new_line.strip()
-    return new_line
+    return TreebankWordDetokenizer().detokenize(sent_tokens)
+    # return new_line
 #
 if __name__ == '__main__':
     print('Start of dictionary build.')
@@ -69,7 +118,7 @@ if __name__ == '__main__':
                             line_ascii = line.encode("ascii",errors="ignore").decode()
                             sentences = sent_tokenize(line_ascii)
                             for s in sentences:
-                                sn.write("{:s}\n".format(s))
+                                sn.write("{}\n".format(s))
                     # f_name = "S_" + f
                     # full_name = os.path.join(d,f_name)
                     # fn = open(full_name,'w')
@@ -91,7 +140,7 @@ if __name__ == '__main__':
                     with open(work_name,'r',encoding='ISO-8859-1') as fn:
                         for line in fn:
                             work_line = basic_math_changes(line)
-                            mn.write("{:s}\n".format(work_line))
+                            mn.write("{}\n".format(work_line))
                     # f_name = "S_" + f
                     # full_name = os.path.join(d,f_name)
                     # fn = open(full_name,'w')
