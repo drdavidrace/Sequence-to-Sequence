@@ -68,11 +68,11 @@ def basic_math_changes(inSentence=None):
     new_line = new_line.replace("can'"," cannot ")
     new_line = new_line.replace("i'd"," i would ")
     new_line = new_line.replace(" im "," i am ")
-    new_line = re.sub(r"(\d+)(pi)", r"\1pi ",new_line)
     new_line = re.sub(r"(pi)[\/]", r" pi over ",new_line)
     new_line = re.sub(r"(pi)[\+]", r" pi plus ",new_line)
     new_line = re.sub(r"(pi)[\-]", r" pi minus ",new_line)
     new_line = re.sub(r"(pi)[\*]", r" pi times ",new_line)
+    new_line = re.sub(r"(\d+)(pi)", r"\1pi ",new_line)
     new_line = re.sub(r"(pi)[\^]", r" pi to the power of  ",new_line)
 
     sent_tokens = word_tokenize(new_line)
